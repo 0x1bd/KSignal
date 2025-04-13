@@ -19,6 +19,17 @@ fun <T> Signal<T>.filter(predicate: (T) -> Boolean): Signal<T> {
 }
 
 /**
+ * Emits only values that are instances of the specified type [R].
+ */
+inline fun <reified R> Signal<*>.filterIsInstance(): Signal<R> {
+    val result = Signal<R>()
+    connect { value ->
+        if (value is R) result.emit(value)
+    }
+    return result
+}
+
+/**
  * Emits only the first [count] values.
  */
 fun <T> Signal<T>.take(count: Int): Signal<T> {

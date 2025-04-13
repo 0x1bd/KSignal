@@ -70,6 +70,22 @@ class SignalTest {
     }
 
     @Test
+    fun testFilterIsInstance() {
+        val signal = Signal<Any>()
+        val filtered = signal.filterIsInstance<String>()
+
+        val results = mutableListOf<String>()
+        filtered.connect { results.add(it) }
+
+        signal.emit(123)
+        signal.emit("hello")
+        signal.emit(456)
+        signal.emit("world")
+
+        assertEquals(listOf("hello", "world"), results)
+    }
+
+    @Test
     fun testTake() {
         val signal = Signal<Int>()
         val taken = signal.take(2)
