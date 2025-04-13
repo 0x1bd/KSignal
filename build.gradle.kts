@@ -4,6 +4,7 @@ plugins {
 
 group = "de.kvxd"
 version = "1.0"
+description = "A simple, lightweight and fully extensible signal system "
 
 repositories {
     mavenCentral()
