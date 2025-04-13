@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.1.10"
 }
 
-group = "de.kvxd"
+group = "io.github.0x1bd"
 version = "1.0.1"
 description = "A simple, lightweight and fully extensible signal system "
 

@@ -1,4 +1,5 @@
 import de.kvxd.ksignal.*
+import io.github.kvxd.ksignal.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

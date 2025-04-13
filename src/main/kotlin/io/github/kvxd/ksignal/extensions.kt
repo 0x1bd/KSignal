@@ -1,4 +1,4 @@
-package de.kvxd.ksignal
+package io.github.kvxd.ksignal
 
 /**
  * Applies a transformation to the emitted value.

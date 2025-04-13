@@ -1,4 +1,4 @@
-package de.kvxd.ksignal
+package io.github.kvxd.ksignal
 
 /**
  * Merges multiple signals into a single signal.
