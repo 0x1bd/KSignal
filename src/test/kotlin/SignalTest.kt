@@ -85,6 +85,22 @@ class SignalTest {
     }
 
     @Test
+    fun testOnEach() {
+        val signal = Signal<Int>()
+        val results = mutableListOf<Int>()
+
+        // Use onEach to perform action on each emission
+        signal.onEach { results.add(it * 2) }
+
+        signal.emit(1)
+        signal.emit(2)
+        signal.emit(3)
+
+        // Expect doubled values
+        assertEquals(listOf(2, 4, 6), results)
+    }
+
+    @Test
     fun testMerge() {
         val a = Signal<Int>()
         val b = Signal<Int>()
@@ -193,6 +209,22 @@ class SignalTest {
         assertEquals(listOf(1), results)
     }
 
+    @Test
+    fun testClear() {
+        val signal = Signal<Int>()
+        var result = -1
+
+        signal.connect { result = it }
+
+        signal.emit(42)
+        assertEquals(42, result)
+
+        signal.clear()
+
+        signal.emit(100)
+
+        assertEquals(42, result)
+    }
 
     @Test
     fun testNoEmissionBeforeConnect() {
