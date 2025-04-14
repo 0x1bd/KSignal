@@ -10,6 +10,27 @@ Use it for clean event dispatching, reactive patters and easy-to-understand asyn
 - ⚡ Lightweight and fast
 
 ## Quick start
+
+KSingal is available on [Maven Central](https://central.sonatype.com/artifact/io.github.0x1bd/KSignal/1.0.1/overview).
+Simply add the dependency using gradle
+
+<details>
+<summary>build.gradle.kts</summary>
+
+```kotlin
+implementation("io.github.0x1bd:KSignal:(latest version)")
+```
+</details>
+
+<details>
+<summary>build.gradle</summary>
+
+```
+implementation 'io.github.0x1bd:KSignal:(latest version)'
+```
+</details>
+
+
 ### Create a signal
 ```kotlin
 val signal = Signal<String>()
