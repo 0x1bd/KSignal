@@ -1,6 +1,6 @@
 # KSignal
 A simple, lightweight and fully extensible signal system for Kotlin applications and libraries.
-Use it for clean event dispatching, reactive patters and easy-to-understand async communication without complex event buses or observers.
+Use it for clean event dispatching, reactive patters and easy-to-understand communication without complex event buses or observers.
 
 ## Features
 - 📦 Zero dependencies
